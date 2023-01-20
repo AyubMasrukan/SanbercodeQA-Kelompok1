@@ -9,12 +9,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as expected_conditions
 
 
-class TestLogin(unittest.TestCase):
+class TestLogout(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome(
             service=ChromeService(ChromeDriverManager().install()))
 
-    def test_login_valid(self):
+    def test_logout_valid(self):
         driver = self.driver
         driver.get("https://itera-qa.azurewebsites.net/Login")
         driver.maximize_window()

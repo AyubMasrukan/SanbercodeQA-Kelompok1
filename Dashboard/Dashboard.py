@@ -9,12 +9,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as expected_conditions
 
 
-class TestRegister(unittest.TestCase):
+class TestDashboarf(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome(
             service=ChromeService(ChromeDriverManager().install()))
 
-    def test_register_valid(self):
+    def test_dashbaord(self):
         driver = self.driver
         driver.get("https://itera-qa.azurewebsites.net")
         driver.maximize_window()
