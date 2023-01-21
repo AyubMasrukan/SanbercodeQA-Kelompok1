@@ -27,6 +27,7 @@ class TestSearch_invalid(unittest.TestCase):
         time.sleep(2)
         driver.find_element(By.ID, "searching").send_keys("Jayapura")
         time.sleep(2)
+        driver.find_element(By.XPATH, "/html/body/div/div/form/input[2]").click()
 
         response_message = driver.find_element(By.XPATH, "/html/body/div/div/table/tbody/tr[2]/td").text
         self.assertEqual(response_message, 'No Match')
