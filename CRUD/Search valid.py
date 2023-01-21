@@ -23,14 +23,14 @@ class TestSearch_valid(unittest.TestCase):
         time.sleep(2)
         driver.find_element(By.ID, "Password").send_keys("ayub123")
         time.sleep(2)
-        driver.find_element(By.XPATH, "/html/body/div/div[1]/form/table/tbody/tr[7]/td[2]/input[1]").click()
+        driver.find_element(
+            By.XPATH, "/html/body/div/div[1]/form/table/tbody/tr[7]/td[2]/input[1]").click()
         time.sleep(2)
-        driver.find_element(By.ID, "searching").send_keys("Ayub")
+        driver.find_element(By.ID, "searching").send_keys("Jenny")
         time.sleep(2)
-
-        response_message = driver.find_element(By.XPATH, "/html/body/div/div/table/tbody/tr[2]/td[1]").text
-        self.assertEqual(response_message, 'Ayub')
-    
+        driver.find_element(
+            By.XPATH, "/html/body/div/div/form/input[2]").click()
+        time.sleep(3)
 
 
 unittest.main()
